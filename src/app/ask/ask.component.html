@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="question">Ask a Question:</label>
+    <input type="text" id="question" [(ngModel)]="question" name="question" required>
+    <button type="submit">Ask</button>
+  </form>
+  <img src="assets/fat-poodle.jpg" alt="Fat Poodle with Crown">
+  
+  <!-- Mostrar la respuesta aquí -->
+  <div *ngIf="responseMessage" class="response">
+    <h3>Response:</h3>
+    <p>{{ responseMessage }}</p>
+  </div>
+  
